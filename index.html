@@ -215,23 +215,31 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-2">Video</h2>
-          <video src="./static/videos/main_cpz.mp4"  autoplay  muted loop playsinline controls width="30%"></video>
+          <video src="./static/videos/TextOp-Preview-151209-480P-cpz.mp4"  autoplay  muted loop playsinline controls width="30%"></video>
       </div>
     </div>
 
 
   <!-- <div class="container is-max-desktop"> -->
     <!-- Abstract. -->
-    <!-- <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-2">Abstract</h2>
+        <!-- <h2 class="title is-2">Abstract</h2> -->
         <div class="content has-text-justified">
           <p>
-            Humanoid robots are promising to acquire various skills by imitating human behaviors. However, existing algorithms are only capable of tracking smooth, low-speed human motions, even with delicate reward and curriculum design. This paper presents a physics-based humanoid control framework, aiming to master highly-dynamic human behaviors such as Kungfu and dancing through multi-steps motion processing and adaptive motion tracking. For motion processing, we design a pipeline to extract, filter out, correct, and retarget motions, while ensuring compliance with physical constraints to the maximum extent. For motion imitation, we formulate a bi-level optimization problem to dynamically adjust the tracking accuracy tolerance based on the current tracking error, creating an adaptive curriculum mechanism. We further construct an asymmetric actor-critic framework for policy training. In experiments, we train whole-body control policies to imitate a set of highly-dynamic motions. Our method achieves significantly lower tracking errors than existing approaches and is successfully deployed on the Unitree G1 robot, demonstrating stable and expressive behaviors.
-          </p>
+            We propose TextOp, a novel framework for real-time, interactive, text-driven humanoid robot motion generation and control.
+
+It allows users to instruct the robot using natural language and modify commands on the fly, producing smooth, whole-body motions instantly.
+
+Our system utilizes a two-system architecture for execution. At the high level, a robot motion diffusion autoregressive model processes current user text commands to generate the kinematic motion trajectory. The low level employs a universal motion tracking policy for motor control. In this way, TextOp achieves both instant responsiveness and precise robot control.
+
+TextOp is highly versatile and supports a wide range of behaviours, from simple gestures to complex motion sequences, all without pre-recorded scripts or manual programming.
+
+This approach provides a significantly more intuitive human-robot interaction paradigm, unlocking the potential for highly adaptable and easily controllable robots in real-world applications.
+        </p>
         </div>
       </div>
-    </div> -->
+    </div>
     <!--/ Abstract. -->
 
 
