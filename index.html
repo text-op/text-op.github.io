@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
   <style>
@@ -7,9 +8,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px; /* 两张图片之间的间距 */
+      gap: 20px;
+      /* 两张图片之间的间距 */
       margin-top: 10px;
     }
+
     .image-container img {
       max-width: 10%;
       height: auto;
@@ -19,70 +22,68 @@
   </style>
 
   <style>
+    .grid-container {
+      width: 150%;
+      max-width: 150%;
+      ;
+      padding: 40px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
 
-  .grid-container {
-    width: 150%;
-    max-width: 150%;;
-    padding: 40px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+      justify-content: center;
+      align-items: center;
 
-    justify-content: center;
-    align-items: center;
-  
-  }
-
-
-  .video-item {
-    text-align: center;
-  }
-
-  .video-item video {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .caption {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #222;
-  }
+    }
 
 
-  .grid-container2 {
-    width: 150%;
-    max-width: 150%;;
-    padding: 40px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    gap: 30px;
+    .video-item {
+      text-align: center;
+    }
 
-    justify-content: center;
-    align-items: center;
-  
-  }
+    .video-item video {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
 
+    .caption {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #222;
+    }
+
+
+    .grid-container2 {
+      width: 150%;
+      max-width: 150%;
+      ;
+      padding: 40px;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 30px;
+
+      justify-content: center;
+      align-items: center;
+
+    }
   </style>
 
   <meta charset="utf-8">
 
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/icon-v4.png">
+  <link rel="icon" href="./static/images/logo-small-nobg.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -94,24 +95,25 @@
 </head>
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9K6749CDS6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXDZK5L5FH"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
-  gtag('config', 'G-9K6749CDS6');
+  gtag('config', 'G-XXDZK5L5FH');
 </script>
 
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control</h1>
-          <!-- <div class="is-size-5 publication-authors">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion
+              Generation and Control</h1>
+            <!-- <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://shi-soul.github.io/">Weiji Xie</a><sup>* 1,2</sup>,
             </span>
@@ -151,13 +153,13 @@
             <span class="author-block"><sup>*</sup>Equal contributions</span>
             <span class="author-block"><sup>&dagger;</sup>Corresponding Author</span><br>
           </div> -->
-          <!-- <div class="is-size-5 publication-authors">
+            <!-- <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>*</sup>Equal Contribution</span>
             <span class="author-block"><sup>†</sup>Corresponding Author</span>
           </div> -->
 
 
-          <!-- <div class="image-container">
+            <!-- <div class="image-container">
             <img src="./static/images/teleai.png" alt="图片1">
             <img src="./static/images/Logo_of_ShanghaiTech_University.svg" alt="图片2">
             <img src="./static/images/ustc.png" alt="图片3">
@@ -167,76 +169,82 @@
 
 
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- Paper -->
-              <span class="link-block">
-                <a href="https://text-op.github.io/"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper (Coming Soon)</span>
-                </a>
-              </span>
-              <!-- arXiv -->
-              <span class="link-block">
-                <a href="https://text-op.github.io/"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv (Coming Soon)</span>
-                </a>
-              </span>
-              <!-- Code -->
-              <span class="link-block">
-                <a href="https://github.com/TeleHuman/TextOp"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Paper -->
+                <span class="link-block">
+                  <a href="https://text-op.github.io/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Coming Soon)</span>
                   </a>
-              </span>
+                </span>
+                <!-- arXiv -->
+                <span class="link-block">
+                  <a href="https://text-op.github.io/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Code -->
+                <span class="link-block">
+                  <a href="https://github.com/TeleHuman/TextOp"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </div>
 
             </div>
-
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
+  <section class="section">
 
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-2">Video</h2> -->
-          <video src="./static/videos/TextOp-Preview-151209-480P-cpz.mp4"  autoplay  muted loop playsinline controls width="60%"></video>
+        <video src="./static/videos/TextOp-Preview-151209-480P-cpz.mp4" autoplay muted loop playsinline controls
+          width="60%"></video>
       </div>
     </div>
 
 
-  <!-- <div class="container is-max-desktop"> -->
+    <!-- <div class="container is-max-desktop"> -->
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <!-- <h2 class="title is-2">Abstract</h2> -->
         <div class="content has-text-justified">
           <p>
-            We propose TextOp, a novel framework for real-time, interactive, text-driven humanoid robot motion generation and control.
+            We propose TextOp, a novel framework for real-time, interactive, text-driven humanoid robot motion
+            generation and control.
 
-It allows users to instruct the robot using natural language and modify commands on the fly, producing smooth, whole-body motions instantly.
+            It allows users to instruct the robot using natural language and modify commands on the fly, producing
+            smooth, whole-body motions instantly.
 
-Our system utilizes a two-system architecture for execution. At the high level, a robot motion diffusion autoregressive model processes current user text commands to generate the kinematic motion trajectory. The low level employs a universal motion tracking policy for motor control. In this way, TextOp achieves both instant responsiveness and precise robot control.
+            Our system utilizes a two-system architecture for execution. At the high level, a robot motion diffusion
+            autoregressive model processes current user text commands to generate the kinematic motion trajectory. The
+            low level employs a universal motion tracking policy for motor control. In this way, TextOp achieves both
+            instant responsiveness and precise robot control.
 
-TextOp is highly versatile and supports a wide range of behaviours, from simple gestures to complex motion sequences, all without pre-recorded scripts or manual programming.
+            TextOp is highly versatile and supports a wide range of behaviours, from simple gestures to complex motion
+            sequences, all without pre-recorded scripts or manual programming.
 
-This approach provides a significantly more intuitive human-robot interaction paradigm, unlocking the potential for highly adaptable and easily controllable robots in real-world applications.
-        </p>
+            This approach provides a significantly more intuitive human-robot interaction paradigm, unlocking the
+            potential for highly adaptable and easily controllable robots in real-world applications.
+          </p>
         </div>
       </div>
     </div>
@@ -244,8 +252,8 @@ This approach provides a significantly more intuitive human-robot interaction pa
 
 
     <!-- <div class="container is-max-desktop"> -->
-      <!-- Abstract. -->
-      <!-- <div class="columns is-centered has-text-centered">
+    <!-- Abstract. -->
+    <!-- <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           <h2 class="title is-2">Method</h2>
           <p style="text-align: left;">
@@ -263,8 +271,8 @@ This approach provides a significantly more intuitive human-robot interaction pa
         </div>
         <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered"> -->
-        <!-- <div class="column is-four-fifths"> -->
-          <!-- <div class="grid-container" style="
+    <!-- <div class="column is-four-fifths"> -->
+    <!-- <div class="grid-container" style="
             display: grid;
             grid-template-columns: repeat(3, 1fr);  /* 改为2列 */
             gap: 20px;  /* 增加间距 */
@@ -348,8 +356,8 @@ This approach provides a significantly more intuitive human-robot interaction pa
         </div>
         
       </div> -->
-      
-      <!-- </div>  -->
+
+    <!-- </div>  -->
     <!-- </div> -->
     <!-- <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
@@ -388,15 +396,15 @@ robot root is fixed to the origin since it’s inaccessible in real-world.
           
         </div>
   </div> -->
-<!-- </div>
+    <!-- </div>
         
         
 </div>
 <br> -->
 
-</section>
+  </section>
 
-<!-- <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{xie2025kungfubot,
@@ -410,24 +418,25 @@ robot root is fixed to the origin since it’s inaccessible in real-world.
 </section> -->
 
 
-<footer class="footer">
-  <div class="container">
+  <footer class="footer">
+    <div class="container">
 
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is adapted from <a rel="license"
-            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
-            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.    
-          </p>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from <a rel="license"
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
