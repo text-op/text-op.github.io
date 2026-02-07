@@ -2,6 +2,24 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TextOp</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo-small-nobg.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
 
   <style>
     .image-container {
@@ -9,7 +27,6 @@
       justify-content: center;
       align-items: center;
       gap: 20px;
-      /* 两张图片之间的间距 */
       margin-top: 10px;
     }
 
@@ -19,24 +36,20 @@
       border: 2px solid #ffffff;
       border-radius: 10px;
     }
-  </style>
 
-  <style>
-    .grid-container {
-      width: 150%;
-      max-width: 150%;
-      ;
-      padding: 40px;
-      box-sizing: border-box;
+    .grid-skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-
-      justify-content: center;
-      align-items: center;
-
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 2rem;
     }
 
+    .grid-robustness {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      margin-top: 2rem;
+    }
 
     .video-item {
       text-align: center;
@@ -55,43 +68,38 @@
       color: #222;
     }
 
-
-    .grid-container2 {
-      width: 150%;
-      max-width: 150%;
-      ;
-      padding: 40px;
-      box-sizing: border-box;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-      gap: 30px;
-
+    .hero-video-container {
+      display: flex;
       justify-content: center;
-      align-items: center;
+      padding-bottom: 2rem;
+    }
 
+    .hero-video {
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .author-block-container {
+      margin-top: 1.5rem;
+    }
+
+    .author-block {
+      margin: 0 10px;
+      white-space: nowrap;
+    }
+
+    .affiliation-block {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contribution-block {
+      margin-top: 0.5rem;
+      font-style: italic;
+      font-size: 0.9rem;
     }
   </style>
-
-  <meta charset="utf-8">
-
-
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/logo-small-nobg.png">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TextOp</title>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -111,97 +119,83 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion
-              Generation and Control</h1>
-            <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://shi-soul.github.io/">Weiji Xie</a><sup>* 1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=zh-CN&user=mJ7tn3MAAAAJ">Jinrui Han</a><sup>* 1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="">Jiakun Zheng</a><sup>* 1,3</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=XhAo4J0AAAAJ&hl=zh-CN">Huanyu Li</a><sup>1,4</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://xinzheliu.github.io/">Xinzhe Liu</a><sup>1,5</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=aVte5j4AAAAJ">Jiyuan Shi</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://wnzhang.net">Weinan Zhang</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://baichenjia.github.io/">Chenjia Bai</a><sup>&dagger; 1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?user=ahUibskAAAAJ">Xuelong Li</a><sup>1</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-             <span class="author-block">Affiliation</span> -->
-            <!-- <span class="author-block"><sup>1</sup>Institute of Artificial Intelligence (TeleAI), China Telecom</span>
-            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
-            <span class="author-block"><sup>3</sup>East China University of Science and Technology</span>
-            <span class="author-block"><sup>4</sup>Harbin Institute of Technology</span>
-            <span class="author-block"><sup>5</sup>ShanghaiTech University</span>
-            <span class="author-block"><sup>*</sup>Equal contributions</span>
-            <span class="author-block"><sup>&dagger;</sup>Corresponding Author</span><br>
-          </div> -->
-            <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>*</sup>Equal Contribution</span>
-            <span class="author-block"><sup>†</sup>Corresponding Author</span>
-          </div> -->
+            <h1 class="title is-1 publication-title">
+              TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control
+            </h1>
 
 
-            <!-- <div class="image-container">
-            <img src="./static/images/teleai.png" alt="图片1">
-            <img src="./static/images/Logo_of_ShanghaiTech_University.svg" alt="图片2">
-            <img src="./static/images/ustc.png" alt="图片3">
-            <img src="./static/images/Seal_of_NWPU.png" alt="图片4">
-            <img src="./static/images/Tsinghua_University_Logo.svg.png" alt="图片5">
-          </div> -->
-
-
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <!-- Paper -->
-                <span class="link-block">
-                  <a href="https://text-op.github.io/" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper (Coming Soon)</span>
-                  </a>
+            <div class="author-block-container is-size-5">
+              <div class="publication-authors">
+                <span class="author-block">
+                  <a href="#">Weiji Xie</a><sup>1,2*</sup>,</span>
+                <span class="author-block">
+                  <a href="#">Jiakun Zheng</a><sup>1,3*</sup>,</span>
+                <span class="author-block">
+                  <a href="#">Jinrui Han</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="#">Jiyuan Shi</a><sup>1</sup>
                 </span>
-                <!-- arXiv -->
-                <span class="link-block">
-                  <a href="https://text-op.github.io/" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv (Coming Soon)</span>
-                  </a>
+              </div>
+              <div class="publication-authors">
+                <span class="author-block">
+                  <a href="#">Weinan Zhang</a><sup>2&dagger;</sup>,</span>
+                <span class="author-block">
+                  <a href="#">Chenjia Bai</a><sup>1&dagger;</sup>,</span>
+                <span class="author-block">
+                  <a href="#">Xuelong Li</a><sup>1</sup>
                 </span>
-                <!-- Code -->
-                <span class="link-block">
-                  <a href="https://github.com/TeleHuman/TextOp"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
               </div>
 
+              <div class="affiliation-block">
+                <span class="author-block"><sup>1</sup>Institute of Artificial Intelligence (TeleAI), China
+                  Telecom</span><br>
+                <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
+                <span class="author-block"><sup>3</sup>East China University of Science and Technology</span>
+              </div>
+
+              <div class="contribution-block">
+                <span class="author-block"><sup>*</sup>Equal contribution</span>
+                <span class="author-block"><sup>&dagger;</sup>Corresponding author</span>
+              </div>
+            </div>
+
+            <div class="institution-logos"
+              style="margin-top: 1.5rem; display: flex; justify-content: center; align-items: center; gap: 30px;">
+              <img src="./static/images/logo-teleai.png" alt="TeleAI" style="height: 120px;">
+              <img src="./static/images/logo-sjtu.png" alt="SJTU" style="height: 120px;">
+              <img src="./static/images/logo-ecust.png" alt="ECUST" style="height: 120px;">
+            </div>
+            <br>
+
+            <div class="publication-links">
+              <!-- Paper -->
+              <span class="link-block">
+                <a href="https://github.com/text-op/text-op.github.io/releases/download/files/paper.pdf"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="https://text-op.github.io/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/TeleHuman/TextOp" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>
@@ -209,228 +203,192 @@
     </div>
   </section>
 
+  <!-- Big Demo Section -->
   <section class="section">
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <!-- <h2 class="title is-2">Video</h2> -->
-        <video src="./static/videos/TextOp-Preview-151209-480P-cpz.mp4" autoplay muted loop playsinline controls
-          width="60%"></video>
-      </div>
-    </div>
-
-
-    <!-- <div class="container is-max-desktop"> -->
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <!-- <h2 class="title is-2">Abstract</h2> -->
-        <div class="content has-text-justified">
-          <p>
-            We propose TextOp, a novel framework for real-time, interactive, text-driven humanoid robot motion
-            generation and control.
-
-            It allows users to instruct the robot using natural language and modify commands on the fly, producing
-            smooth, whole-body motions instantly.
-
-            Our system utilizes a two-system architecture for execution. At the high level, a robot motion diffusion
-            autoregressive model processes current user text commands to generate the kinematic motion trajectory. The
-            low level employs a universal motion tracking policy for motor control. In this way, TextOp achieves both
-            instant responsiveness and precise robot control.
-
-            TextOp is highly versatile and supports a wide range of behaviours, from simple gestures to complex motion
-            sequences, all without pre-recorded scripts or manual programming.
-
-            This approach provides a significantly more intuitive human-robot interaction paradigm, unlocking the
-            potential for highly adaptable and easily controllable robots in real-world applications.
-          </p>
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 has-text-centered">Video</h2>
+      <!-- Main Video -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <video src="./static/videos/TextOp-Preview-151209-480P-cpz.mp4" autoplay muted loop playsinline controls
+            width="100%" style="border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"></video>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-
-
-    <!-- <div class="container is-max-desktop"> -->
-    <!-- Abstract. -->
-    <!-- <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2">Method</h2>
-          <p style="text-align: left;">
-
-          </p>
-          <div style="display: flex; justify-content: center; align-items: center;">
-          <img style="max-width: 150%; max-height: 600px;" src="./static/images/method.png" alt="图片1">
-          </div>
-          
-        </div>
-      </div> 
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-2">Real World Experiments</h2>
-        </div>
-        <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered"> -->
-    <!-- <div class="column is-four-fifths"> -->
-    <!-- <div class="grid-container" style="
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);  /* 改为2列 */
-            gap: 20px;  /* 增加间距 */
-            justify-items: center;  /* 水平居中 */
-            align-items: center;  /* 垂直居中 */
-          ">
-        
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Jump kick</div>
-          <video src="./static/videos/Jump kick.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Roundhouse kick</div>
-          <video src="./static/videos/roundhouse kick.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Side kick</div>
-          <video src="./static/videos/side kick.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Front kick</div>
-          <video src="./static/videos/front kick.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Back Kick</div>
-          <video src="./static/videos/back kick.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">360-degree spin</div>
-          <video src="./static/videos/360 spin.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Dance</div>
-          <video src="./static/videos/dance.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Bruce Lee's pose</div>
-          <video src="./static/videos/BruceLee.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Fighting combo</div>
-          <video src="./static/videos/fighting combo.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        
-        
-        
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Horse stance punch</div>
-          <video src="./static/videos/horse stance punch.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Hooks punch</div>
-          <video src="./static/videos/hooks punch.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Jabs punch</div>
-          <video src="./static/videos/Jabs punch.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Horse stance pose</div>
-          <video src="./static/videos/horse stance pose.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Stretch leg</div>
-          <video src="./static/videos/Stretch leg.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-
-        <div class="video-item" style="width: 100%;">
-          <div class="caption">Tai Chi</div>
-          <video src="./static/videos/Tai Chi.mp4" autoplay muted loop playsinline controls style="width: 100%;"></video>
-        </div>
-        
-      </div> -->
-
-    <!-- </div>  -->
-    <!-- </div> -->
-    <!-- <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-2">Experiment Results</h2>
-          <h2 class="title is-4">Main Results</h2>
-          <p style="text-align: left;">
-          Main results comparing different methods across difficulty levels. PBHC consistently
-          outperforms deployable baselines and approaches oracle-level performance. Results are reported as
-          mean ±one standard deviation. Bold indicates methods within one standard deviation of the best
-          result, excluding MaskedMimic.
-          </p>
-          <div style="display: flex; justify-content: center; align-items: center;">
-          <img style="max-width: 100%; max-height: 600px;" src="./static/images/result1.jpg" alt="图片2">
-          </div>
-          <br>
-          <br>
-          <h2 class="title is-4">Ablation on Adaptive Motion Tracking</h2>
-          <p style="text-align: left;">
-            Ablation study comparing the adaptive motion tracking mechanism with fixed tracking
-factor variants. The adaptive mechanism consistently achieves near-optimal performance across all
-motions, whereas fixed variants exhibit varying performance depending on motions.
-          </p>
-          <div style="display: flex; justify-content: center; align-items: center;">
-          <img style="max-width: 100%; max-height: 600px;" src="./static/images/result2.jpg" alt="图片2">
-          </div>
-          <br>
-          <br>
-          <h2 class="title is-4">Sim-to-Real Result</h2>
-          <p style="text-align: left;">
-            Comparison of tracking performance of Tai Chi between real-world and simulation. The
-robot root is fixed to the origin since it’s inaccessible in real-world.
-          </p>
-          <div style="display: flex; justify-content: center; align-items: center;">
-          <img style="max-width: 100%; max-height: 600px;" src="./static/images/result3.jpg" alt="图片2">
-          </div>
-          
-        </div>
-  </div> -->
-    <!-- </div>
-        
-        
-</div>
-<br> -->
-
   </section>
 
-  <!-- <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{xie2025kungfubot,
-        title={KungfuBot: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills},
-        author={Xie, Weiji and Han, Jinrui and Zheng, Jiakun and Li, Huanyu and Liu, Xinzhe and Shi, Jiyuan and Zhang, Weinan and Bai, Chenjia and Li, Xuelong},
-        journal={arXiv preprint arXiv:2506.12851},
-        year={2025}
-      }
-</code></pre>
-  </div>
-</section> -->
+  <!-- Abstract Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>
+              Recent advances in humanoid whole-body motion tracking have enabled the execution of diverse and highly
+              coordinated motions on real hardware. However, existing controllers are commonly driven either by
+              predefined motion trajectories, which offer limited flexibility when user intent changes, or by continuous
+              human teleoperation, which requires constant human involvement and limits autonomy. This work addresses
+              the problem of how to drive a universal humanoid controller in a real-time and interactive manner. We
+              present TextOp, a real-time text-driven humanoid motion generation and control framework that supports
+              streaming language commands and on-the-fly instruction modification during execution. TextOp adopts a
+              two-level architecture in which a high-level autoregressive motion diffusion model continuously generates
+              short-horizon kinematic trajectories conditioned on the current text input, while a low-level motion
+              tracking policy executes these trajectories on a physical humanoid robot. By bridging interactive motion
+              generation with robust whole-body control, TextOp unlocks free-form intent expression and enables smooth
+              transitions across multiple challenging behaviors such as dancing and jumping, within a single continuous
+              motion execution. Extensive real-robot experiments and offline evaluations demonstrate instant
+              responsiveness, smooth whole-body motion, and precise control. The project page and the open-source code
+              are available at https://text-op.github.io/ .
+            </p>
+          </div>
+        </div>
+      </div>
 
+      <!-- Teaser Image -->
+      <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+        <div class="column is-full-width">
+          <img src="./static/images/teaser-v2.png" alt="Teaser Image"
+            style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <img src="./static/images/method-v4.png" alt="Method Image"
+            style="width: 100%; border-radius: 10px; margin-top: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Robot Experiments Section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+      <h2 class="title is-2 has-text-centered">Real Robot Experiments</h2>
+
+      <!-- One-Take Demo -->
+      <h3 class="title is-3">One-Take Demo</h3>
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="video-item">
+            <video src="" autoplay muted loop playsinline controls
+              style="width: 100%; background: #eee; min-height: 300px; border-radius: 10px;"></video>
+            <div class="caption">One-Take Full Demonstration</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Demos (9) -->
+      <h3 class="title is-3" style="margin-top: 4rem;">Multi Skill Demo</h3>
+      <div class="grid-skills">
+        <!-- Row 1 -->
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 1</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 2</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 3</div>
+        </div>
+        <!-- Row 2 -->
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 4</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 5</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 6</div>
+        </div>
+        <!-- Row 3 -->
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 7</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 8</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 150px; border-radius: 10px;"></video>
+          <div class="caption">Skill 9</div>
+        </div>
+      </div>
+
+      <!-- Robustness Demos (4) -->
+      <h3 class="title is-3" style="margin-top: 4rem;">Robustness</h3>
+      <div class="grid-robustness">
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 200px; border-radius: 10px;"></video>
+          <div class="caption">Robustness 1</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 200px; border-radius: 10px;"></video>
+          <div class="caption">Robustness 2</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 200px; border-radius: 10px;"></video>
+          <div class="caption">Robustness 3</div>
+        </div>
+        <div class="video-item">
+          <video src="" autoplay muted loop playsinline controls
+            style="width: 100%; background: #eee; min-height: 200px; border-radius: 10px;"></video>
+          <div class="caption">Robustness 4</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Citation Section -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Citation</h2>
+      <pre><code>@article{xie2025textop,
+  title={TextOp: Real-time Interactive Text-Driven Humanoid Robot Motion Generation and Control},
+  author={Xie, Weiji and Zheng, Jiakun and Han, Jinrui and Shi, Jiyuan and Zhang, Weinan and Bai, Chenjia and Li, Xuelong},
+  journal={arXiv preprint},
+  year={2026}
+}</code></pre>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container">
-
       <div class="columns is-centered">
         <div class="column is-8">
           <div class="content">
             <p>
               This website is adapted from <a rel="license"
                 href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
-                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-                Commons Attribution-ShareAlike 4.0 International License</a>.
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                International License</a>.
             </p>
-
           </div>
         </div>
       </div>
