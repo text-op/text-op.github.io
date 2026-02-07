@@ -1,1 +1,0 @@
-All videos should be put on github repo release.
